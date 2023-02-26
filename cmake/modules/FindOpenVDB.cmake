@@ -107,7 +107,7 @@ if (OPENVDB_FIND_MODULE_PATH)
   set(_module_path_bak ${CMAKE_MODULE_PATH})
   set(CMAKE_MODULE_PATH ${OPENVDB_FIND_MODULE_PATH})
   find_package(
-    OpenVDB ${OpenVDB_FIND_VERSION} QUIET
+    OpenVDB ${OpenVDB_FIND_VERSION}
     COMPONENTS
       ${OpenVDB_FIND_COMPONENTS}
   )
@@ -180,7 +180,7 @@ set(_OPENVDB_ROOT_SEARCH_DIR "")
 # Additionally try and use pkconfig to find OpenVDB
 
 find_package(PkgConfig ${_quiet} )
-pkg_check_modules(PC_OpenVDB QUIET OpenVDB)
+pkg_check_modules(PC_OpenVDB OpenVDB)
 
 # ------------------------------------------------------------------------
 #  Search for OpenVDB include DIR
